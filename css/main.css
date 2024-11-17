@@ -39,16 +39,16 @@
 
     }
     to {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 7%;
+        margin-right: 7%;
         opacity: 1;
     }
 }
 
 @keyframes section-r {
     from {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 7%;
+        margin-right: 7%;
         opacity: 1;
         
 
@@ -123,8 +123,8 @@ section{
 
 section:hover {
     animation: section 0.1s ease-out;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
     opacity: 1;
 }
 

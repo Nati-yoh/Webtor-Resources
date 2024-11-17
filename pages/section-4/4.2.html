@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html structures</title>
+    <link rel="stylesheet" href="../section-css/pages.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href ="https://nati-yoh.github.io/Webtor-Resources/" class="logo">Webtor</a>
+        </nav>
+    </header>
+
+    <main>
+        <h3 id="-understanding-justify-content-and-align-items-in-flexbox-"><strong>Understanding <code>justify-content</code> and <code>align-items</code> in Flexbox</strong></h3>
+<p>These two properties are the backbone of Flexbox alignment, controlling how items are distributed and aligned along the <strong>main axis</strong> and the <strong>cross axis</strong>.</p>
+<hr>
+<h3 id="-justify-content-align-along-the-main-axis-"><strong><code>justify-content</code>: Align Along the Main Axis</strong></h3>
+<p>The <code>justify-content</code> property determines how flex items are spaced along the <strong>main axis</strong> (horizontal by default). </p>
+<h4 id="-values-"><strong>Values</strong></h4>
+<ol>
+<li><p><strong><code>flex-start</code></strong> (default):<br>Items align at the start of the main axis.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-keyword">justify-content: </span>flex-start<span class="hljs-comment">;</span>
+</code></pre>
+</li>
+<li><p><strong><code>flex-end</code></strong>:<br>Items align at the end of the main axis.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-keyword">justify-content: </span>flex-end<span class="hljs-comment">;</span>
+</code></pre>
+</li>
+<li><p><strong><code>center</code></strong>:<br>Items are centered along the main axis.<br>Example:  </p>
+<pre><code class="lang-css">justify-<span class="hljs-built_in">content</span>: <span class="hljs-built_in">center</span>;
+</code></pre>
+</li>
+<li><p><strong><code>space-between</code></strong>:<br>Equal space between items, with no space at the edges.<br>Example:  </p>
+<pre><code class="lang-css">justify-content: <span class="hljs-literal">space</span>-<span class="hljs-keyword">between</span>;
+</code></pre>
+</li>
+<li><p><strong><code>space-around</code></strong>:<br>Equal space around items, including at the edges (half-sized at the ends).<br>Example:  </p>
+<pre><code class="lang-css">justify-content: <span class="hljs-literal">space</span>-<span class="hljs-keyword">around</span>;
+</code></pre>
+</li>
+<li><p><strong><code>space-evenly</code></strong>:<br>Equal space between items, including at the edges.<br>Example:  </p>
+<pre><code class="lang-css">justify-<span class="hljs-built_in">content</span>: <span class="hljs-built_in">space</span>-evenly;
+</code></pre>
+</li>
+</ol>
+<hr>
+<h3 id="-align-items-align-along-the-cross-axis-"><strong><code>align-items</code>: Align Along the Cross Axis</strong></h3>
+<p>The <code>align-items</code> property controls the alignment of items along the <strong>cross axis</strong> (vertical by default).</p>
+<h4 id="-values-"><strong>Values</strong></h4>
+<ol>
+<li><p><strong><code>stretch</code></strong> (default):<br>Items stretch to fill the container&#39;s cross axis.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-attribute">align-items</span>: stretch;
+</code></pre>
+</li>
+<li><p><strong><code>flex-start</code></strong>:<br>Items align at the start of the cross axis.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-attribute">align-items</span>: flex-start;
+</code></pre>
+</li>
+<li><p><strong><code>flex-end</code></strong>:<br>Items align at the end of the cross axis.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-symbol">align</span>-<span class="hljs-keyword">items: </span>flex-<span class="hljs-meta">end</span><span class="hljs-comment">;</span>
+</code></pre>
+</li>
+<li><p><strong><code>center</code></strong>:<br>Items are centered along the cross axis.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-attribute">align-items</span>: center;
+</code></pre>
+</li>
+<li><p><strong><code>baseline</code></strong>:<br>Items align based on their text baselines.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-attribute">align-items</span>: baseline;
+</code></pre>
+</li>
+</ol>
+<hr>
+<h3 id="-examples-"><strong>Examples</strong></h3>
+<h4 id="horizontal-alignment-justify-content-">Horizontal Alignment (<code>justify-content</code>)</h4>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">3</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-between; <span class="hljs-comment">/* Spreads items evenly */</span>
+}
+</code></pre>
+<h4 id="vertical-alignment-align-items-">Vertical Alignment (<code>align-items</code>)</h4>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> style=<span class="hljs-string">"height: 50px;"</span>&gt;Item <span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">3</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center; <span class="hljs-comment">/* Aligns items to the center of the container's height */</span>
+}
+</code></pre>
+<hr>
+<h3 id="-combining-both-"><strong>Combining Both</strong></h3>
+<p>You can use <code>justify-content</code> and <code>align-items</code> together for precise layout control.</p>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">3</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center; <span class="hljs-comment">/* Center horizontally */</span>
+  <span class="hljs-attribute">align-items</span>: flex-start; <span class="hljs-comment">/* Align items at the top */</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>; <span class="hljs-comment">/* To demonstrate vertical alignment */</span>
+}
+</code></pre>
+<p><strong>Key Points</strong>:</p>
+<ul>
+<li><strong><code>justify-content</code></strong> aligns items along the main axis (left-right in <code>row</code> or top-bottom in <code>column</code>).</li>
+<li><strong><code>align-items</code></strong> aligns items along the cross axis (top-bottom in <code>row</code> or left-right in <code>column</code>). </li>
+</ul>
+<p>They work together to provide full control over Flexbox layouts.</p>
+
+    </main>
+
+
+</body>
+</html>

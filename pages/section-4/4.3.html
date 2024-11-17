@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html structures</title>
+    <link rel="stylesheet" href="../section-css/pages.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href ="https://nati-yoh.github.io/Webtor-Resources/" class="logo">Webtor</a>
+        </nav>
+    </header>
+
+    <main>
+        <h3 id="-flex-properties-"><strong>Flex Properties</strong></h3>
+<p>The <code>flex</code> property is a shorthand that controls how flex items grow, shrink, and take up space inside a flex container. It consists of three sub-properties: <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>.</p>
+<hr>
+<h3 id="-1-flex-shorthand-syntax-"><strong>1. <code>flex</code> Shorthand Syntax</strong></h3>
+<pre><code class="lang-css"><span class="hljs-symbol">flex:</span> <span class="hljs-params">&lt;flex-grow&gt;</span> <span class="hljs-params">&lt;flex-shrink&gt;</span> <span class="hljs-params">&lt;flex-basis&gt;</span>;
+</code></pre>
+<ul>
+<li><strong><code>flex-grow</code></strong>: Controls how much an item will grow relative to others.</li>
+<li><strong><code>flex-shrink</code></strong>: Controls how much an item will shrink when space is tight.</li>
+<li><strong><code>flex-basis</code></strong>: Defines the starting size of an item before growth or shrinking.</li>
+</ul>
+<p>If you omit values, defaults are used:  </p>
+<pre><code class="lang-css"><span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
+</code></pre>
+<p>This means:</p>
+<ul>
+<li><code>flex-grow: 0</code> → Item will not grow.</li>
+<li><code>flex-shrink: 1</code> → Item can shrink if necessary.</li>
+<li><code>flex-basis: auto</code> → Size is based on the content or width/height set.</li>
+</ul>
+<hr>
+<h3 id="-2-sub-properties-"><strong>2. Sub-properties</strong></h3>
+<h4 id="-flex-grow-default-0-"><strong><code>flex-grow</code></strong> (default: <code>0</code>)</h4>
+<p>Specifies how much a flex item will grow relative to others <strong>when extra space is available</strong>.  </p>
+<ul>
+<li>A value of <code>0</code> means the item won’t grow.</li>
+<li>A value of <code>1</code> (or higher) allows the item to grow proportionally.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.item1</span> {
+  <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>; <span class="hljs-comment">/* Will grow to fill extra space */</span>
+}
+<span class="hljs-selector-class">.item2</span> {
+  <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">2</span>; <span class="hljs-comment">/* Will grow twice as much as item1 */</span>
+}
+</code></pre>
+<h4 id="-flex-shrink-default-1-"><strong><code>flex-shrink</code></strong> (default: <code>1</code>)</h4>
+<p>Specifies how much a flex item will shrink relative to others <strong>when space is tight</strong>.  </p>
+<ul>
+<li>A value of <code>0</code> prevents shrinking.</li>
+<li>A value of <code>1</code> (or higher) allows proportional shrinking.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.item1</span> {
+  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">1</span>; <span class="hljs-comment">/* Will shrink if space is limited */</span>
+}
+<span class="hljs-selector-class">.item2</span> {
+  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">0</span>; <span class="hljs-comment">/* Won't shrink */</span>
+}
+</code></pre>
+<h4 id="-flex-basis-default-auto-"><strong><code>flex-basis</code></strong> (default: <code>auto</code>)</h4>
+<p>Defines the initial size of the flex item before growing or shrinking.  </p>
+<ul>
+<li>Can be set in absolute units (<code>px</code>, <code>%</code>) or <code>auto</code> (content size).  </li>
+<li>Overrides width/height unless set to <code>auto</code>.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.item</span> {
+  <span class="hljs-attribute">flex-basis</span>: <span class="hljs-number">200px</span>; <span class="hljs-comment">/* Item starts at 200px wide */</span>
+}
+</code></pre>
+<hr>
+<h3 id="-3-using-the-shorthand-"><strong>3. Using the Shorthand</strong></h3>
+<p><strong>Example 1: Equal Growth, No Shrinking, Fixed Basis</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.item</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">100px</span>; <span class="hljs-comment">/* Will grow, won't shrink, starts at 100px */</span>
+}
+</code></pre>
+<p><strong>Example 2: Proportional Growth</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.item1</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>; <span class="hljs-comment">/* Equal growth */</span>
+}
+<span class="hljs-selector-class">.item2</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">2</span>; <span class="hljs-comment">/* Grows twice as much as item1 */</span>
+}
+</code></pre>
+<p><strong>Example 3: Preventing Growth and Shrinking</strong></p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.item</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">150px</span>; <span class="hljs-comment">/* Fixed size of 150px, won't grow or shrink */</span>
+}
+</code></pre>
+<hr>
+<h3 id="-4-practical-example-"><strong>4. Practical Example</strong></h3>
+<p>HTML:</p>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"item item1"</span>&gt;Item <span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"item item2"</span>&gt;Item <span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"item item3"</span>&gt;Item <span class="hljs-number">3</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<p>CSS:</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}
+
+<span class="hljs-selector-class">.item1</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>; <span class="hljs-comment">/* Takes equal space */</span>
+}
+<span class="hljs-selector-class">.item2</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">2</span>; <span class="hljs-comment">/* Takes twice the space of item1 */</span>
+}
+<span class="hljs-selector-class">.item3</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>; <span class="hljs-comment">/* Same size as item1 */</span>
+}
+</code></pre>
+<p><strong>Result</strong>:  </p>
+<ul>
+<li>Item 2 will be twice as wide as Items 1 and 3.</li>
+</ul>
+<hr>
+<h3 id="-key-points-"><strong>Key Points</strong></h3>
+<ul>
+<li>Use <code>flex-grow</code> for distributing extra space.</li>
+<li>Use <code>flex-shrink</code> for managing shrinking behavior in tight spaces.</li>
+<li>Use <code>flex-basis</code> to define the initial size of the item.</li>
+<li>Combine all three with the <code>flex</code> shorthand for clean and powerful layouts.</li>
+</ul>
+
+    </main>
+
+
+</body>
+</html>

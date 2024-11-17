@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html structures</title>
+    <link rel="stylesheet" href="../section-css/pages.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href ="https://nati-yoh.github.io/Webtor-Resources/" class="logo">Webtor</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>To code in CSS, you select an HTML element and set properties to style it. Here’s a basic example using the <code>color</code> property to change text color:</p>
+<h3>CSS Syntax</h3>
+<p>CSS follows this structure:</p>
+<pre><code class="language-css">selector {
+    property: value;
+}
+</code></pre>
+<h3>Using the <code>color</code> Property</h3>
+<p>Let's apply the <code>color</code> property to make text appear in different colors.</p>
+<pre><code class="language-css">/* This sets all &lt;p&gt; elements to have red text */
+p {
+    color: red;
+}
+
+/* This sets all &lt;h1&gt; elements to have blue text */
+h1 {
+    color: blue;
+}
+
+/* This sets elements with the class &quot;highlight&quot; to have green text */
+.highlight {
+    color: green;
+}
+
+/* This sets elements with the id &quot;main-title&quot; to have purple text */
+#main-title {
+    color: purple;
+}
+</code></pre>
+<p>In HTML, these styles will change the colors of elements based on the selectors:</p>
+<pre><code class="language-html">&lt;h1 id=&quot;main-title&quot;&gt;This is the Main Title&lt;/h1&gt;
+&lt;p&gt;This paragraph text will be red.&lt;/p&gt;
+&lt;p class=&quot;highlight&quot;&gt;This highlighted text will be green.&lt;/p&gt;
+</code></pre>
+<p>Using the <code>color</code> property, you can control the text color for different elements on your webpage.</p>
+
+
+
+
+
+
+    <h1>Css selectors
+    </h1>
+    <p>In CSS, selectors are used to target HTML elements and apply styles to them. Here’s a breakdown of the most common CSS selectors:</p>
+<h3>1. <strong>Universal Selector (<code>*</code>)</strong></h3>
+<p>Selects all elements on the page.</p>
+<pre><code class="language-css">* {
+   color: black;
+}
+</code></pre>
+<h3>2. <strong>Type Selector (Element Selector)</strong></h3>
+<p>Selects all elements of a specific type (like <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, etc.).</p>
+<pre><code class="language-css">p {
+   color: blue;
+}
+h1 {
+   color: red;
+}
+</code></pre>
+<h3>3. <strong>Class Selector (<code>.</code>)</strong></h3>
+<p>Selects all elements with a specific class. Use a period <code>.</code> followed by the class name.</p>
+<pre><code class="language-css">.highlight {
+   color: green;
+}
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p class=&quot;highlight&quot;&gt;This text is green.&lt;/p&gt;
+</code></pre>
+<h3>4. <strong>ID Selector (<code>#</code>)</strong></h3>
+<p>Selects an element with a specific ID. Use a hash <code>#</code> followed by the ID name.</p>
+<pre><code class="language-css">#main-title {
+   color: purple;
+}
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h1 id=&quot;main-title&quot;&gt;This title is purple.&lt;/h1&gt;
+</code></pre>
+<h3>5. <strong>Descendant Selector (Space)</strong></h3>
+<p>Selects elements that are nested inside other elements.</p>
+<pre><code class="language-css">div p {
+   color: orange;
+}
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;div&gt;
+   &lt;p&gt;This text inside a div is orange.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>6. <strong>Child Selector (<code>&gt;</code>)</strong></h3>
+<p>Selects elements that are direct children of another element.</p>
+<pre><code class="language-css">div &gt; p {
+   color: yellow;
+}
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;div&gt;
+   &lt;p&gt;This paragraph is directly inside a div and is yellow.&lt;/p&gt;
+   &lt;section&gt;
+      &lt;p&gt;This paragraph is inside a section, not directly inside the div.&lt;/p&gt;
+   &lt;/section&gt;
+&lt;/div&gt;
+</code></pre>
+<h3>7. <strong>Attribute Selector (<code>[]</code>)</strong></h3>
+<p>Selects elements based on an attribute or its value.</p>
+<pre><code class="language-css">input[type=&quot;text&quot;] {
+   background-color: lightblue;
+}
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;Enter text here&quot;&gt;
+</code></pre>
+<h3>8. <strong>Pseudo-Classes (<code>:</code>)</strong></h3>
+<p>Selects elements in a specific state, like when a user hovers over a link.</p>
+<pre><code class="language-css">a:hover {
+   color: red;
+}
+</code></pre>
+<h3>9. <strong>Pseudo-Elements (<code>::</code>)</strong></h3>
+<p>Selects a specific part of an element, like the first letter or line.</p>
+<pre><code class="language-css">p::first-letter {
+   font-size: 2em;
+   color: blue;
+}
+</code></pre>
+<h3>Examples in HTML and CSS:</h3>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;div&gt;
+   &lt;p class=&quot;highlight&quot; id=&quot;special&quot;&gt;This paragraph is styled with class and ID.&lt;/p&gt;
+   &lt;p&gt;This paragraph is just normal.&lt;/p&gt;
+   &lt;a href=&quot;#&quot;&gt;Hover over me&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<p>CSS:</p>
+<pre><code class="language-css">/* Universal selector */
+* {
+   font-family: Arial, sans-serif;
+}
+
+/* Class selector */
+.highlight {
+   font-weight: bold;
+   color: green;
+}
+
+/* ID selector */
+#special {
+   color: blue;
+}
+
+/* Pseudo-class selector */
+a:hover {
+   color: red;
+}
+</code></pre>
+<p>This covers the basic ways you can select elements in HTML using CSS. By combining different selectors and properties, you can create sophisticated and responsive designs.</p>
+
+    </main>
+
+
+</body>
+</html>

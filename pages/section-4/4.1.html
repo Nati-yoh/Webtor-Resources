@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html structures</title>
+    <link rel="stylesheet" href="../section-css/pages.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href ="https://nati-yoh.github.io/Webtor-Resources/" class="logo">Webtor</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Flexbox (Flexible Box Layout) is a CSS layout system that makes it easy to align, distribute, and organize elements within a container, especially when their sizes are dynamic.</p>
+<h3 id="-what-flexbox-does-"><strong>What Flexbox Does</strong></h3>
+<ul>
+<li>Aligns items <strong>horizontally</strong> or <strong>vertically</strong> without needing complex CSS.</li>
+<li>Distributes free space between items or pushes them together.</li>
+<li>Helps create responsive designs by adjusting item size automatically.</li>
+</ul>
+<h3 id="-how-to-apply-flexbox-"><strong>How to Apply Flexbox</strong></h3>
+<ol>
+<li><p><strong>Enable Flexbox</strong><br>Add <code>display: flex;</code> to the parent element.<br>Example:  </p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}
+</code></pre>
+</li>
+<li><p><strong>Align Items Along Axes</strong></p>
+<ul>
+<li><strong>Main Axis</strong>: Controlled with <code>flex-direction</code>. It determines the direction of items (row or column).</li>
+<li><strong>Cross Axis</strong>: Controlled with <code>align-items</code> or <code>align-self</code>.</li>
+</ul>
+</li>
+<li><p><strong>Customize Behavior</strong>
+Use additional properties like <code>justify-content</code>, <code>flex-wrap</code>, and <code>flex</code> (on children) for precise control.</p>
+</li>
+</ol>
+<h3 id="-minimal-example-"><strong>Minimal Example</strong></h3>
+<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string">"container"</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">2</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+  &lt;<span class="hljs-keyword">div</span>&gt;Item <span class="hljs-number">3</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex; <span class="hljs-comment">/* Enables Flexbox */</span>
+  <span class="hljs-attribute">justify-content</span>: space-between; <span class="hljs-comment">/* Spreads items horizontally */</span>
+  <span class="hljs-attribute">align-items</span>: center; <span class="hljs-comment">/* Aligns items vertically */</span>
+}
+</code></pre>
+<p>With Flexbox, items adjust to fit their container dynamically, making layouts simple and flexible.</p>
+
+    </main>
+
+
+</body>
+</html>

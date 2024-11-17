@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html structures</title>
+    <link rel="stylesheet" href="../section-css/pages.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href ="https://nati-yoh.github.io/Webtor-Resources/" class="logo">Webtor</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>CSS can be included in HTML in three primary ways:</p>
+<ol>
+<li>
+<p><strong>Inline CSS</strong>: Adds styles directly to individual HTML elements using the <code>style</code> attribute. Useful for quick, specific changes but not ideal for larger projects.</p>
+<pre><code class="language-html">&lt;p style=&quot;color: blue; font-size: 16px;&quot;&gt;This is an inline-styled paragraph.&lt;/p&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>Internal CSS</strong>: Adds styles within the <code>&lt;style&gt;</code> tag inside the <code>&lt;head&gt;</code> section. This approach styles the entire HTML document but keeps the CSS separate from content structure.</p>
+<pre><code class="language-html">&lt;head&gt;
+   &lt;style&gt;
+      p {
+         color: green;
+         font-size: 18px;
+      }
+   &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>External CSS</strong>: Links to an external CSS file, typically named <code>style.css</code>, which contains all the styles for the website. This method is the best for large projects, as it keeps HTML and CSS separate and makes styling changes easier to manage across multiple pages.</p>
+<pre><code class="language-html">&lt;head&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+</li>
+</ol>
+<p>Each method serves different needs, with external CSS being the preferred approach for organized, scalable projects.</p>
+
+    </main>
+
+
+</body>
+</html>

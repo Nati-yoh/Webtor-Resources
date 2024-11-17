@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html structures</title>
+    <link rel="stylesheet" href="../section-css/pages.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href ="https://nati-yoh.github.io/Webtor-Resources/" class="logo">Webtor</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Here’s a guide to HTML forms, covering the <code>&lt;form&gt;</code> tag, various types of <code>&lt;input&gt;</code>, and buttons.</p>
+<h3>1. <strong>Form Tag (<code>&lt;form&gt;</code>)</strong></h3>
+<p>The <code>&lt;form&gt;</code> tag is used to create an HTML form for collecting user inputs. Key attributes include:</p>
+<ul>
+<li>
+<code>action</code>: URL where form data will be sent.</li>
+<li>
+<code>method</code>: HTTP method, usually <code>&quot;post&quot;</code> or <code>&quot;get&quot;</code>.</li>
+</ul>
+<pre><code class="language-html">&lt;form action=&quot;/submit-form&quot; method=&quot;post&quot;&gt;
+   &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;
+</code></pre>
+<h3>2. <strong>Text Input (<code>&lt;input type=&quot;text&quot;&gt;</code>)</strong></h3>
+<p>Creates a single-line text input field.</p>
+<pre><code class="language-html">&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
+</code></pre>
+<h3>3. <strong>Password Input (<code>&lt;input type=&quot;password&quot;&gt;</code>)</strong></h3>
+<p>Hides the text as it’s entered, commonly used for passwords.</p>
+<pre><code class="language-html">&lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+&lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot;&gt;
+</code></pre>
+<h3>4. <strong>Email Input (<code>&lt;input type=&quot;email&quot;&gt;</code>)</strong></h3>
+<p>Validates the entered text as an email address.</p>
+<pre><code class="language-html">&lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+&lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
+</code></pre>
+<h3>5. <strong>Number Input (<code>&lt;input type=&quot;number&quot;&gt;</code>)</strong></h3>
+<p>Accepts only numeric input. Attributes like <code>min</code>, <code>max</code>, and <code>step</code> can control value range.</p>
+<pre><code class="language-html">&lt;label for=&quot;age&quot;&gt;Age:&lt;/label&gt;
+&lt;input type=&quot;number&quot; id=&quot;age&quot; name=&quot;age&quot; min=&quot;1&quot; max=&quot;100&quot;&gt;
+</code></pre>
+<h3>6. <strong>Radio Buttons (<code>&lt;input type=&quot;radio&quot;&gt;</code>)</strong></h3>
+<p>Allows users to select one option from a group.</p>
+<pre><code class="language-html">&lt;label&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt; Male
+&lt;/label&gt;
+&lt;label&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt; Female
+&lt;/label&gt;
+</code></pre>
+<h3>7. <strong>Checkbox (<code>&lt;input type=&quot;checkbox&quot;&gt;</code>)</strong></h3>
+<p>Allows users to select multiple options.</p>
+<pre><code class="language-html">&lt;label&gt;
+   &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; value=&quot;newsletter&quot;&gt; Subscribe to newsletter
+&lt;/label&gt;
+</code></pre>
+<h3>8. <strong>Date Input (<code>&lt;input type=&quot;date&quot;&gt;</code>)</strong></h3>
+<p>Provides a date picker for selecting a date.</p>
+<pre><code class="language-html">&lt;label for=&quot;birthday&quot;&gt;Birthday:&lt;/label&gt;
+&lt;input type=&quot;date&quot; id=&quot;birthday&quot; name=&quot;birthday&quot;&gt;
+</code></pre>
+<h3>9. <strong>Submit Button (<code>&lt;input type=&quot;submit&quot;&gt;</code>)</strong></h3>
+<p>Submits the form data to the server.</p>
+<pre><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+</code></pre>
+<h3>10. <strong>Button Element (<code>&lt;button&gt;</code>)</strong></h3>
+<p>Provides a clickable button, which can trigger form submission or other actions when combined with JavaScript.</p>
+<pre><code class="language-html">&lt;button type=&quot;submit&quot;&gt;Submit Form&lt;/button&gt;
+</code></pre>
+<h3>Full Example</h3>
+<p>Here’s how these elements look together in a form:</p>
+<pre><code class="language-html">&lt;form action=&quot;/submit-form&quot; method=&quot;post&quot;&gt;
+   &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt;
+   &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot;&gt;
+
+   &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+   &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;
+
+   &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+   &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot;&gt;
+
+   &lt;label&gt;Gender:&lt;/label&gt;
+   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt; Male
+   &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt; Female
+
+   &lt;label for=&quot;age&quot;&gt;Age:&lt;/label&gt;
+   &lt;input type=&quot;number&quot; id=&quot;age&quot; name=&quot;age&quot; min=&quot;1&quot; max=&quot;100&quot;&gt;
+
+   &lt;label for=&quot;birthday&quot;&gt;Birthday:&lt;/label&gt;
+   &lt;input type=&quot;date&quot; id=&quot;birthday&quot; name=&quot;birthday&quot;&gt;
+
+   &lt;input type=&quot;checkbox&quot; name=&quot;subscribe&quot; value=&quot;newsletter&quot;&gt; Subscribe to newsletter
+
+   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<p>This form setup covers basic user input options, ready for collecting data!</p>
+
+    </main>
+
+
+</body>
+</html>

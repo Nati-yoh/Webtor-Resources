@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic html structures</title>
+    <link rel="stylesheet" href="../section-css/pages.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href ="https://nati-yoh.github.io/Webtor-Resources/" class="logo">Webtor</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>The <strong>CSS Box Model</strong> is a fundamental concept that defines the layout and design of elements on a web page. Every HTML element can be thought of as a rectangular box, and the box model describes how these boxes are structured and how space is allocated around them.</p>
+<p>The box model consists of <strong>four key parts</strong>:</p>
+<ol>
+<li>
+<p><strong>Content</strong>:<br />
+This is the actual content of the element, such as text, images, or any other data. The size of the content area is controlled by the <code>width</code> and <code>height</code> properties in CSS.</p>
+<ul>
+<li>Example:
+<pre><code class="language-css">.box {
+   width: 300px;
+   height: 200px;
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Padding</strong>:<br />
+The space between the content and the element's border. Padding adds space <strong>inside</strong> the element, around the content. It can be set individually for each side (top, right, bottom, left), or shorthand can be used.</p>
+<ul>
+<li>Example:
+<pre><code class="language-css">.box {
+   padding: 20px; /* 20px padding on all sides */
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Border</strong>:<br />
+The border wraps around the padding (if any) and content. The <code>border</code> property controls its width, style, and color. Like padding, you can set borders for each side separately (top, right, bottom, left).</p>
+<ul>
+<li>Example:
+<pre><code class="language-css">.box {
+   border: 5px solid black; /* 5px solid border around the box */
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Margin</strong>:<br />
+The outermost space around the box. Margin creates space <strong>outside</strong> the element, pushing it away from other elements. Like padding, margins can be set individually for each side, or shorthand can be used.</p>
+<ul>
+<li>Example:
+<pre><code class="language-css">.box {
+   margin: 10px; /* 10px margin on all sides */
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h3>Diagram of the Box Model</h3>
+<pre><code>+------------------------+
+|        Margin           |
+|  +------------------+   |
+|  |    Border        |   |
+|  |  +------------+  |   |
+|  |  |  Padding   |  |   |
+|  |  |  +------+  |  |   |
+|  |  |  |Content|  |  |   |
+|  |  |  +------+  |  |   |
+|  |  +------------+  |   |
+|  +------------------+   |
++------------------------+
+</code></pre>
+<h3>Box Model Calculation</h3>
+<p>The total width and height of an element are calculated by adding the content size, padding, border, and margin. However, by default, the <code>width</code> and <code>height</code> only apply to the content area, not including padding, border, and margin. To include padding and border in the <code>width</code> and <code>height</code> calculation, use the <code>box-sizing: border-box</code> property.</p>
+<h3>Example with <code>box-sizing: content-box</code> (default)</h3>
+<ul>
+<li>
+<strong>Width of the element</strong> = <code>width</code> + <code>padding</code> (left + right) + <code>border</code> (left + right)
+<pre><code class="language-css">.box {
+   width: 300px;       /* content width */
+   padding: 20px;      /* padding inside the box */
+   border: 5px solid black; /* border around the content */
+   margin: 10px;       /* margin outside the box */
+}
+</code></pre>
+</li>
+</ul>
+<p>In this case, the total width of the box will be:</p>
+<ul>
+<li>Total width = <code>300px</code> (content) + <code>20px</code> (left padding) + <code>20px</code> (right padding) + <code>5px</code> (left border) + <code>5px</code> (right border) = <strong>350px</strong>.</li>
+</ul>
+<h3>Example with <code>box-sizing: border-box</code></h3>
+<p>By setting <code>box-sizing: border-box</code>, the padding and border are included in the element's width and height.</p>
+<pre><code class="language-css">.box {
+   box-sizing: border-box; /* Includes padding and border in width/height */
+   width: 300px;           /* total width (content + padding + border) */
+   padding: 20px;
+   border: 5px solid black;
+   margin: 10px;
+}
+</code></pre>
+<p>Now, the total width of the box remains <strong>300px</strong>, even with padding and borders, as they're included within the specified width.</p>
+<h3>Summary</h3>
+<ul>
+<li>
+<strong>Content</strong>: The actual content of the element.</li>
+<li>
+<strong>Padding</strong>: Space between content and border.</li>
+<li>
+<strong>Border</strong>: Wraps around the padding and content.</li>
+<li>
+<strong>Margin</strong>: Space outside the border, creating space between the element and other elements.</li>
+</ul>
+<p>The CSS Box Model allows developers to control layout and spacing effectively, making it a crucial concept for designing web pages.</p>
+
+    </main>
+
+
+</body>
+</html>
